@@ -1,0 +1,118 @@
+
+
+import java.util.*;
+public class Main
+{
+    
+    static int p=2;static int q=2;static int r=2;
+    public static int  mirinda() 
+    {
+       int result=0;
+        result= p--;
+       return result;
+    }
+     public static int thumbsup() 
+    {
+        int result=0;
+       result= q--;
+       return result;
+    }
+     public static int sprite() 
+    {
+        int result=0;
+       result= r--;
+       return result;
+    }
+    
+    public static void main(String []args)
+    
+    {
+        
+         Scanner sc=new Scanner(System.in);
+         boolean swap=false;
+    do
+    {
+        System.out.println("1.mirinda");
+        System.out.println("2.thumbsup");
+        System.out.println("3.sprite");
+        System.out.println("Enter your choice");
+       
+        int userchoice=sc.nextInt();
+        int cost=40;
+        switch(userchoice)
+        {
+           
+            case 1:
+                
+                int a=mirinda();
+                if(a<=0)
+                {
+                    System.out.println("Your drink is unavailable");
+                    break;
+                }
+                else
+                {
+                    System.out.println("Give the amount");
+                    int amount=sc.nextInt();
+                    if(amount<cost)
+                    System.out.println("Insufficient amount");
+                     else
+                     {
+                     System.out.println("Collect Your balance "+(amount-cost)+"Rupees");
+                     System.out.println("Collect your mirinda");
+                     System.out.println("Thank you");
+                     }
+                }
+                break;
+                case 2:
+                
+                int b=thumbsup();
+                if(b<=0)
+                {
+                    System.out.println("Your drink is unavailable");
+                }
+                else
+                {
+                   System.out.println("Give the amount");
+                    int amount=sc.nextInt();
+                    if(amount<cost)
+                    System.out.println("Insufficient amount");
+                     else
+                     {
+                     System.out.println("Collect Your balance "+(amount-cost)+"Rupees");
+                     System.out.println("Collect your thumbsup");
+                     System.out.println("Thank you");
+                         
+                     }
+                }
+                break;
+                case 3:
+                
+                int c=sprite();
+                if(c<=0)
+                {
+                    System.out.println("Your drink is unavailable");
+                }
+                else
+                {
+                    System.out.println("Give the amount");
+                    int amount=sc.nextInt();
+                    if(amount<cost)
+                    System.out.println("Insufficient amount");
+                    
+                     else
+                     {
+                     System.out.println("Collect Your balance "+(amount-cost)+"Rupees");
+                     System.out.println("Collect your sprite");
+                     System.out.println("Thank you");
+                     }
+                }
+                break;
+                default :
+                    System.out.println("Please give valid input");
+        }
+    } while(!swap);
+    }  
+}   
+
+
